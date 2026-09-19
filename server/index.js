@@ -21,9 +21,9 @@ app.use(cors({
 app.use(express.json());
 
 // Routes
-app.use('/api/auth', authRoutes);
-app.use('/api/events', eventRoutes);
-app.use('/api/bookings', bookingRoutes);
+app.use('/auth', authRoutes);
+app.use('/events', eventRoutes);
+app.use('/bookings', bookingRoutes);
 
 // Database Connection
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/eventora')
